@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --primary-color: #000000;
+    --secondary-color: #F6F6F6;
+    --tertiary-color: #22D4FD;
+    --hover-color: #272727;
+    --font-montserrat: "Montserrat", sans-serif;
+    --font-krona: "Krona One", sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    /*height: 100 vh;*/
+    box-sizing: border-box; /*va a servir para que "body" sea un contenedor y sus hijos "child" no salgan de esta caja. "Border box" lo limita, "content box" no, respeta el tamaño de los hijos aunque sean más grandes que el padre */
+}
+
+/*strong {
+    color: var(--tertiary-color);
+}*/
+
+.header {
+    padding: 2% 0 0 15%;
+}
+
+.header-menu{
+    display: flex;
+    gap: 80px;
+
+}
+
+.header-menu-link{
+    font-family: var(--font-montserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--tertiary-color);
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    padding: 6% 15%;
+    justify-content: space-between;
+    gap: 82px;
+}
+
+.container-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.container-content-title {
+    font-size: 2.25rem;
+    font-family: var(--font-krona);
+}
+
+.container-content-paragraph {
+    font-size: 1.5rem;
+    font-family: var(--font-montserrat);
+}
+
+.container-links {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.container-links-subtitle {
+    font-family: var(--font-krona);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.container-links-button {
+    width: 50%;
+    /*background-color: #22D4FD;*/
+    text-align: center;
+    padding: 21.5px 0;
+    border-radius: 8px;
+    font-family: var(--font-montserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--secondary-color);
+    border: 2px solid var(--tertiary-color);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.container-links-button:hover{
+    background-color: var(--hover-color);
+}
+
+.container-picture{
+    width: 50%;
+}
+
+.container-content-titleStrong {
+    color: var(--tertiary-color);
+}
+
+
+
+.container-content-name {
+    color: var(--tertiary-color);
+    padding: 2px;
+    /*border: 1px solid var(--tertiary-color);
+    border-radius: 6px;
+    margin: 2px;*/
+
+}
+
+.footer {
+    background-color: var(--tertiary-color);
+    padding: 1.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    font-family: var(--font-montserrat);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+@media (max-width: 1200px) {
+
+    .header {
+        padding: 10%;
+    }
+
+    .header-menu{
+        justify-content: center;
+    }
+
+    .container {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .container-content {
+        width: auto;
+    }
+
+    .container-content-name {
+        color: var(--secondary-color);
+    }
+
+
+
+
+
+}
